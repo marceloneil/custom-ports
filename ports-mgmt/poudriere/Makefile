@@ -20,7 +20,10 @@ NO_BUILD=	yes
 MANCOMPRESSED=	yes
 MAN8=	poudriere.8
 
-OPTIONS+=	ZSH "Install zsh completion" off
+OPTIONS_DEFINE=	ZSH
+ZSH_DESC=	Install zsh completion
+
+CONFLICTS_INSTALL=	poudriere-devel-*
 
 PLIST_FILES=	etc/poudriere.conf.sample \
 		bin/poudriere \
